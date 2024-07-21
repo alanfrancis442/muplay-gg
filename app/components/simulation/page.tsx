@@ -94,7 +94,7 @@ function Simulate() {
                         return(
                             <div key={i} className="relative group char-card opacity-0 translate-y-[100%]">
                                 <Image src={`/simulate/card${i+1}.png`} className="card absolute bottom-0 z-10" alt="simulate" height={500} width={500} ></Image>
-                                <Image src={`/simulate/char${i+1}.svg`} className="char transition-transform duration-300 transform group-hover:scale-105" alt="simulate" height={300} width={300} ></Image>
+                                <Image src={`/simulate/char${i+1}.svg`} className="char transition-transform duration-300 transform group-hover:scale-105 pb-32" alt="simulate" height={500} width={300} ></Image>
                             </div>
                         )
                     })

@@ -23,16 +23,18 @@ return (
         <div className="flex md:gap-20 flex-col md:flex-row gap-4 md:gap:5">
             {[
                 {
-                    title: "ABOUT US",
+                    title: "OUR PARTNERS",
                     links: [
-                        { label: "Zeux", href: "#zeux" },
-                        { label: "Portfolio", href: "#portfolio" },
-                        { label: "Careers", href: "#careers" },
-                        { label: "Contact us", href: "#contact" }
+                        { label: "TILTLABS", href: "#TITLABS" },
+                        { label: "AKEF", href: "#" },
+                        { label: "AnimationXpress", href: "#careers" },
+                        { label: "Banzan studios", href: "#contact" },
+                        { label: "Norian games", href: "#contact" },
+                        { label: "MakeMypass", href: "#contact" },
                     ]
                 },
                 {
-                    title: "SOCIALS",
+                    title: "SOCIAL HANDLES",
                     links: [
                         { label: "Instagram", href: "https://www.instagram.com/muplay.gg/",icon:<FaInstagram /> },
                         { label: "Youtube", href: "https://www.youtube.com/@muplay-gg",icon:<FaYoutube /> },
