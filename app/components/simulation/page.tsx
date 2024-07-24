@@ -7,12 +7,11 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useRef } from "react";
 
 function Simulate() {
+  const container = useRef(null);
+  const cardContainerRef = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
 
-    const container = useRef(null);
-    const cardContainerRef = useRef(null);
-    gsap.registerPlugin(ScrollTrigger);
-    
-    useGSAP(() => {
+  /*useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: container.current,
@@ -74,34 +73,72 @@ function Simulate() {
             }
         }); 
 
-    }, { scope: container });
-    
-    return ( 
-        <div id="updates" ref={container} className="flex flex-col justify-center items-center text-center">
-            <div className="flex flex-col justify-center items-center gap-5 z-10 relative">
-                <Image src="/simulate/Console_l.png" className="controller absolute -z-10 left-[-45%]" alt="simulate" height={1000} width={1000} ></Image>
-                <Image src="/simulate/Console_r.png" className="controller absolute right-[-45%] -z-10 md:scale-[1.5] sm:scale-[1.2]"
-                  alt="simulate" height={800} width={800} ></Image>
-                <h1 className="main-content font-paladins sm:text-6xl text-4xl">SIMULATE ‘24</h1>
-                <p className="main-content text-lg w-1/2">Gear up for Simulate, our prestigious annual eSports championship that brings together the best talents in the gaming world.</p>
-                <div className="main-content">
-                    <Button url={'https://mulearn.org/'} label={"Join Now !"} />
-                </div>
-            </div>
-            <div ref={cardContainerRef} className=" w-full mt-8 py-44 px-32 flex flex-col md:flex-row gap-10 justify-between items-center relative z-50">
-                {
-                    Array(3).fill(0).map((e,i)=>{
-                        return(
-                            <div key={i} className="relative group char-card opacity-0 translate-y-[100%]">
-                                <Image src={`/simulate/card${i+1}.png`} className="card absolute bottom-0 z-10" alt="simulate" height={500} width={500} ></Image>
-                                <Image src={`/simulate/char${i+1}.svg`} className="char transition-transform duration-300 transform group-hover:scale-105 pb-32" alt="simulate" height={500} width={300} ></Image>
-                            </div>
-                        )
-                    })
-                }
-            </div>
+    }, { scope: container });*/
+
+  return (
+    <div
+      id="updates"
+      ref={container}
+      className="flex flex-col justify-center items-center text-center"
+    >
+      <div className="flex flex-col justify-center items-center gap-5 z-10 relative">
+        <Image
+          src="/simulate/Console_l.png"
+          className="controller absolute -z-10 left-[-45%]"
+          alt="simulate"
+          height={1000}
+          width={1000}
+        ></Image>
+        <Image
+          src="/simulate/Console_r.png"
+          className="controller absolute right-[-45%] -z-10 md:scale-[1.5] sm:scale-[1.2]"
+          alt="simulate"
+          height={800}
+          width={800}
+        ></Image>
+        <h1 className="main-content font-paladins sm:text-6xl text-4xl">
+          SIMULATE ‘24
+        </h1>
+        <p className="main-content text-lg w-1/2">
+          Gear up for Simulate, our prestigious annual eSports championship that
+          brings together the best talents in the gaming world.
+        </p>
+        <div className="main-content">
+          <Button url={"https://mulearn.org/"} label={"Join Now !"} />
         </div>
-     );
+      </div>
+      <div
+        ref={cardContainerRef}
+        className=" w-full mt-8 py-44 px-32 flex flex-col md:flex-row gap-10 justify-between items-center relative z-50"
+      >
+        {Array(3)
+          .fill(0)
+          .map((e, i) => {
+            return (
+              <div
+                key={i}
+                className="relative group char-card opacity-0 translate-y-[100%]"
+              >
+                <Image
+                  src={`/simulate/card${i + 1}.png`}
+                  className="card absolute bottom-0 z-10"
+                  alt="simulate"
+                  height={500}
+                  width={500}
+                ></Image>
+                <Image
+                  src={`/simulate/char${i + 1}.svg`}
+                  className="char transition-transform duration-300 transform group-hover:scale-105 pb-32"
+                  alt="simulate"
+                  height={500}
+                  width={300}
+                ></Image>
+              </div>
+            );
+          })}
+      </div>
+    </div>
+  );
 }
 
 export default Simulate;

@@ -13,56 +13,60 @@ function Question() {
   // const isInView = useInView(cardContainerRef);
 
   const container = useRef(null);
-  useGSAP(() => {
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: container.current,
-            start: 'top 50%',
-            end: '50% 50%',
-            scrub: 1,
-            // markers: true,
-            // pin: true, // Assuming you want the pinning effect for the whole timeline
-        }
-    });
+  // useGSAP(
+  //   () => {
+  //     const tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: container.current,
+  //         start: "top 50%",
+  //         end: "50% 50%",
+  //         scrub: 1,
+  //         // markers: true,
+  //         // pin: true, // Assuming you want the pinning effect for the whole timeline
+  //       },
+  //     });
 
-    tl.fromTo('.ani-content', {
-        opacity: 0,
-        // y: 100
-    }, {
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        ease: 'power1.inOut',
-        stagger:{
-            amount: 0.5,
-            from: 'start',
-            ease: 'power1.inOut'
-        }
-    })
+  //     tl.fromTo(
+  //       ".ani-content",
+  //       {
+  //         opacity: 0,
+  //         // y: 100
+  //       },
+  //       {
+  //         opacity: 1,
+  //         y: 0,
+  //         duration: 1.5,
+  //         ease: "power1.inOut",
+  //         stagger: {
+  //           amount: 0.5,
+  //           from: "start",
+  //           ease: "power1.inOut",
+  //         },
+  //       }
+  //     );
 
-    gsap.to('.char-card',
-      {
-        y: 0,
-        duration: 2.5,
-        opacity: 1,
-        ease: 'power1.inOut',
-        stagger: {
-            each: 0.5,
-            from: 'start',
-            ease: 'power3.inOut'
-      },
-      scrollTrigger:{
-        trigger: cardContainerRef.current,
-        start: 'top 80%',
-        end: '80% 80%',
-        scrub: 2.5,
-        // markers: true,
-        // pin: true, // Assuming you want the pinning effect for the whole timeline
-      }
-    }); // Use relative position to start the second animation at the same time as the first
-
-}, { scope: container });
-
+  //     gsap.to(".char-card", {
+  //       y: 0,
+  //       duration: 2.5,
+  //       opacity: 1,
+  //       ease: "power1.inOut",
+  //       stagger: {
+  //         each: 0.5,
+  //         from: "start",
+  //         ease: "power3.inOut",
+  //       },
+  //       scrollTrigger: {
+  //         trigger: cardContainerRef.current,
+  //         start: "top 80%",
+  //         end: "80% 80%",
+  //         scrub: 2.5,
+  //         // markers: true,
+  //         // pin: true, // Assuming you want the pinning effect for the whole timeline
+  //       },
+  //     }); // Use relative position to start the second animation at the same time as the first
+  //   },
+  //   { scope: container }
+  // );
 
   // useEffect(() => {
   //   if (isInView) {
@@ -85,7 +89,11 @@ function Question() {
 
   const createWordDivs = (text) => {
     return text.split(" ").map((word, index) => (
-      <div style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }} className="inline-block px-1 py-1" key={index}>
+      <div
+        style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
+        className="inline-block px-1 py-1"
+        key={index}
+      >
         <p className="inline anitext leading-none">{word}</p>
       </div>
     ));
@@ -128,18 +136,28 @@ function Question() {
   };
 
   return (
-    <div id="about" ref={container}
+    <div
+      id="about"
+      ref={container}
       className="flex flex-col justify-center items-center min-h-screen gap-56 py-32 sm:py-56 sm:pt-40 bg-black"
     >
       <div className="flex flex-col items-center justify-center w-[90%] sm:w-[55%] gap-4 text-center">
         <div className={`${styles.cliptext} py-2`}>
-          <h1 className={`ani-content text-4xl font-paladins anitext overflow-hidden}`}>
+          <h1
+            className={`ani-content text-4xl font-paladins anitext overflow-hidden}`}
+          >
             What’s MuPlay?
           </h1>
         </div>
-        <div className={`ani-content text-lg py-4 overflow-hidden ${styles.cliptext}`}>
+        <div
+          className={`ani-content text-lg py-4 overflow-hidden ${styles.cliptext}`}
+        >
           <p>
-          muPlay.gg is a premier gaming club established by <b>μLearn</b> and <b>TILTLABS</b>, dedicated to uniting and empowering the gaming community. Our platform is structured into three dynamic verticals: Game Development, Gamers, and esports, where you can connect, grow, and thrive in the gaming universe.
+            muPlay.gg is a premier gaming club established by <b>μLearn</b> and{" "}
+            <b>TILTLABS</b>, dedicated to uniting and empowering the gaming
+            community. Our platform is structured into three dynamic verticals:
+            Game Development, Gamers, and esports, where you can connect, grow,
+            and thrive in the gaming universe.
           </p>
         </div>
       </div>
@@ -147,19 +165,55 @@ function Question() {
         <div
           className={`${styles.cliptext} flex justify-center items-center flex-col`}
         >
-          <h1 className="ani-content text-4xl font-paladins">Excited right?!</h1>
+          <h1 className="ani-content text-4xl font-paladins">
+            Excited right?!
+          </h1>
           <p className="ani-content text-lg w-1/2">
             Follow these steps to join the community right now
           </p>
         </div>
         <div
-      ref={cardContainerRef}
-        className="flex justify-between items-center flex-col md:flex-row gap-10 w-full grop relative z-50">
+          ref={cardContainerRef}
+          className="flex justify-between items-center flex-col md:flex-row gap-10 w-full grop relative z-50"
+        >
           {data.map((e, i) => (
-            <div key={i} className="char-card translate-y-[100%] opacity-0">
-              <QuestionCard  index={i} content={e} ></QuestionCard>
+            <div
+              key={i}
+              className="char-card
+             translate-y-[0%] 
+             opacity-1"
+            >
+              <QuestionCard index={i} content={e}></QuestionCard>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="w-[90%] mulearn and tiltlabs box-center flex-col relative">
+        <Image
+          src={"/questions/muframe.svg"}
+          width={1200}
+          height={1000}
+          alt="frame"
+        ></Image>
+        <Image
+          src={"/questions/tiltframe.svg"}
+          width={1200}
+          height={1000}
+          alt="frame"
+          className="-translate-y-28 max-md:-translate-y-10"
+        ></Image>
+      </div>
+      <div className="clip-box box-center w-[90%] text-lg bg-[url(/questions/about.png)] bg-cover bg-center">
+        <div className="w-4/5 max-md:w-5/6 py-16 flex flex-col gap-8 justify-between text-center">
+          <h1 className="font-paladins text-4xl">Join the Journey</h1>
+          <p>
+            Together, <b>µLearn</b> and <b>TILTLABS</b> propel μPlay.gg towards
+            new heights, creating a space where gaming is not just a hobby but a
+            lifestyle. Join us on this exciting journey as we embrace the thrill
+            of competition, the joy of connection, and the boundless
+            possibilities that gaming brings to our lives
+          </p>
+          <p>Welcome to μPlay.gg—where your gaming adventure begins.</p>
         </div>
       </div>
     </div>
