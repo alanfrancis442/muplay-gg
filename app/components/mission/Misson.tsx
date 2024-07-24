@@ -69,7 +69,7 @@ const contribure_cards = [
 
 function Misson() {
   return (
-    <div className=" pt-12 py-64 box-center flex-col">
+    <div className=" pt-12 py-24 box-center flex-col">
       <div className=" box-center bg-[url(/mission/mission_bg.jpg)] bg-cover bg-center py-28 w-full">
         <div className="box-center flex-col gap-12">
           <h1 className="text-4xl font-paladins text-wrap text-center">
@@ -134,8 +134,10 @@ function Misson() {
         ></Image>
         <div className="flex flex-col gap-8">
           <div>
-            <h1 className="text-4xl font-paladins">activities we do</h1>
-            <p>
+            <h1 className="text-4xl text-wrap text-center font-paladins">
+              activities we do
+            </h1>
+            <p className="text-wrap text-center">
               {`μPlay.gg is more than just a community—it's a hub of activity.
               Some of our key activities include`}
             </p>
@@ -165,7 +167,7 @@ function Misson() {
         <p className="font-paladins text-4xl text-center text-wrap">
           How We Contribute to the Creative Community
         </p>
-        <p>
+        <p className="text-center text-wrap">
           At μPlay.gg, we believe in the power of creativity. We contribute to
           the creative community by:
         </p>

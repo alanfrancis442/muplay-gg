@@ -48,16 +48,16 @@ export default function Home() {
         data-scroll
         data-scroll-container
         ref={scrollRef}
-        className="overflow-hidden bg-black text-white absolute top-0"
+        className="overflow-hidden bg-black text-white absolute top-0 w-full"
       >
         <Landing />
         <Question />
         <Legacy />
         <Misson />
-        {/* <Cap />
-        <Events /> */}
+        <Cap />
+        <Events />
         <Simulate />
-        {/* <Teams /> */}
+        <Teams />
         <Partners />
         <Footer />
       </div>

@@ -109,7 +109,7 @@ function Simulate() {
       </div>
       <div
         ref={cardContainerRef}
-        className=" w-full mt-8 py-44 px-32 flex flex-col md:flex-row gap-10 justify-between items-center relative z-50"
+        className=" w-full mt-8 py-44 px-32 flex flex-col md:flex-row gap-10 justify-between items-center relative z-50 2xl:justify-center 2xl:gap-32"
       >
         {Array(3)
           .fill(0)
@@ -117,7 +117,7 @@ function Simulate() {
             return (
               <div
                 key={i}
-                className="relative group char-card opacity-0 translate-y-[100%]"
+                className="relative group char-card opacity-1 translate-y-[0%]"
               >
                 <Image
                   src={`/simulate/card${i + 1}.png`}

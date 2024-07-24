@@ -15,7 +15,7 @@ const details = [
   {
     title: "Build Community",
     description:
-      "Create a network of gamers and developers within their campus, fostering a micro-community that ties into the larger μPlay.gg network.",
+      "Build a campus network of gamers and developers, linking to the larger μPlay.gg community.",
   },
 ];
 
@@ -28,18 +28,15 @@ function Cap() {
           Our Campus Ambassador program aims to bring μPlay.gg to educational
           institutions. Ambassadors:
         </p>
-        <div className="box-center gap-12 px-12 pt-8 max-md:flex-col">
+        <div className=" w-full grid md:grid-cols-3 max-md:grid-row-3 gap-12 px-8">
           {details.map((e, i) => (
             <div
               key={i}
               className="box-center bg-[#1E1E1E] p-3 flex justify-between clip-box"
             >
               <div className="w-1/2">
-                <h1 className="font-bold text-2xl">Organize Events</h1>
-                <p className="text-sm">
-                  Host events and activities in their institutions to engage
-                  students
-                </p>
+                <h1 className="font-bold text-2xl">{e.title}</h1>
+                <p className="text-sm text-wrap">{e.description}</p>
               </div>
               <Image
                 src={"/Cap/icon.png"}

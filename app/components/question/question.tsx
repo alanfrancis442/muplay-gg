@@ -188,7 +188,7 @@ function Question() {
           ))}
         </div>
       </div>
-      <div className="w-[90%] mulearn and tiltlabs box-center flex-col relative">
+      <div className="md:w-[90%] mulearn and tiltlabs box-center flex-col relative">
         <Image
           src={"/questions/muframe.svg"}
           width={1200}
