@@ -120,7 +120,7 @@ function Simulate() {
                 className="relative group char-card opacity-1 translate-y-[0%]"
               >
                 <Image
-                  src={`/simulate/card${i + 1}.Webp`}
+                  src={`/simulate/card${i + 1}.webp`}
                   className="card absolute bottom-0 z-10"
                   alt="simulate"
                   height={500}

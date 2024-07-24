@@ -31,7 +31,7 @@ export default function Page() {
   return (
     <div className="text-white w-full flex flex-col justify-center items-center gap-5 pb-12">
       <h1 className="text-4xl font-bold font-paladins">Our Partners</h1>
-      <div className="flex justify-center items-center gap-8 ">
+      <div className="flex justify-center items-center gap-1 md:gap-8 ">
         {logo.map((item, index) => (
           <a
             key={index}
@@ -43,8 +43,9 @@ export default function Page() {
             <Image
               src={`${item.icon}`}
               alt="partner"
-              width={100}
-              height={100}
+              width={150}
+              height={150}
+              className="cursor-pointer"
             />
           </a>
         ))}
