@@ -21,7 +21,7 @@ const details = [
 
 function Cap() {
   return (
-    <div className="py-32 mb-64 box-center w-full bg-[url(/Cap/background.png)] bg-cover bg-center text-center ">
+    <div className="py-32 mb-64 box-center w-full bg-[url(/Cap/background.webp)] bg-cover bg-center text-center ">
       <div className=" w-full h-full box-center flex-col gap-5">
         <h1 className="text-4xl font-paladins">Campus Ambassador Program</h1>
         <p>
@@ -39,7 +39,7 @@ function Cap() {
                 <p className="text-sm text-wrap">{e.description}</p>
               </div>
               <Image
-                src={"/Cap/icon.png"}
+                src={"/Cap/icon.webp"}
                 width={150}
                 height={150}
                 alt="ambassador"

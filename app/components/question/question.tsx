@@ -113,7 +113,7 @@ function Question() {
         // transition={{delay: 0.5*index}}
       >
         <Image
-          src={`/questions/Frame${index + 1}.png`}
+          src={`/questions/Frame${index + 1}.webp`}
           alt="frame"
           height={500}
           width={500}
@@ -203,7 +203,7 @@ function Question() {
           className="-translate-y-28 max-md:-translate-y-10"
         ></Image>
       </div>
-      <div className="clip-box box-center w-[90%] text-lg bg-[url(/questions/about.png)] bg-cover bg-center">
+      <div className="clip-box box-center w-[90%] text-lg bg-[url(/questions/about.webp)] bg-cover bg-center">
         <div className="w-4/5 max-md:w-5/6 py-16 flex flex-col gap-8 justify-between text-center">
           <h1 className="font-paladins text-4xl">Join the Journey</h1>
           <p>

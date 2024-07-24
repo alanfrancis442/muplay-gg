@@ -83,14 +83,14 @@ function Simulate() {
     >
       <div className="flex flex-col justify-center items-center gap-5 z-10 relative">
         <Image
-          src="/simulate/Console_l.png"
+          src="/simulate/Console_l.webp"
           className="controller absolute -z-10 left-[-45%]"
           alt="simulate"
           height={1000}
           width={1000}
         ></Image>
         <Image
-          src="/simulate/Console_r.png"
+          src="/simulate/Console_r.webp"
           className="controller absolute right-[-45%] -z-10 md:scale-[1.5] sm:scale-[1.2]"
           alt="simulate"
           height={800}
@@ -120,7 +120,7 @@ function Simulate() {
                 className="relative group char-card opacity-1 translate-y-[0%]"
               >
                 <Image
-                  src={`/simulate/card${i + 1}.png`}
+                  src={`/simulate/card${i + 1}.Webp`}
                   className="card absolute bottom-0 z-10"
                   alt="simulate"
                   height={500}

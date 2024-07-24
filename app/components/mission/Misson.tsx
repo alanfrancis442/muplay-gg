@@ -70,7 +70,7 @@ const contribure_cards = [
 function Misson() {
   return (
     <div className=" pt-12 py-24 box-center flex-col">
-      <div className=" box-center bg-[url(/mission/mission_bg.jpg)] bg-cover bg-center py-28 w-full">
+      <div className=" box-center bg-[url(/mission/mission_bg.webp)] bg-cover bg-center py-28 w-full">
         <div className="box-center flex-col gap-12">
           <h1 className="text-4xl font-paladins text-wrap text-center">
             Mission & Vision of muplay.gg
@@ -126,7 +126,7 @@ function Misson() {
 
       <div className="act flex w-[95%] gap-10 box-center max-md:flex-col py-12">
         <Image
-          src="/mission/activities.png"
+          src="/mission/activities.webp"
           alt="activities"
           width={900}
           height={500}
@@ -150,7 +150,7 @@ function Misson() {
                     width={50}
                     height={50}
                     alt="activity"
-                    src={"/mission/icon.png"}
+                    src={"/mission/icon.webp"}
                   ></Image>
                   <div className="box-center flex flex-col justify-start items-start">
                     <span className="text-2xl font-bold">{e.title}</span>
@@ -176,7 +176,7 @@ function Misson() {
             return (
               <div key={i} className="box-center relative z-0">
                 <Image
-                  src={`/mission/cards/c${i + 1}img.png`}
+                  src={`/mission/cards/c${i + 1}img.webp`}
                   width={250}
                   height={250}
                   className={`absolute -top-36`}
@@ -192,7 +192,7 @@ function Misson() {
                     </p>
                   </div>
                   <Image
-                    src={`/mission/cards/b${i + 1}img.png`}
+                    src={`/mission/cards/b${i + 1}img.webp`}
                     width={250}
                     height={250}
                     className="w-full"
