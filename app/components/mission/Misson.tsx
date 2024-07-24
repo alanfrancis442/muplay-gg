@@ -110,10 +110,12 @@ function Misson() {
                     className="rounded-lg h-16 w-16"
                   ></Image>
                   <div className="flex items-center max-md:flex-col">
-                    <span className="text-ld font-paladins text-nowrap text-2xl pr-4">
+                    <span className="text-ld font-paladins md:text-nowrap text-wrap md:text-2xl text-xl pr-4">
                       {Object.keys(e)[0]} :
                     </span>
-                    <p className="text-wrap text-lg">{Object.values(e)[0]}</p>
+                    <p className="text-wrap md:text-lg text-base">
+                      {Object.values(e)[0]}
+                    </p>
                   </div>
                 </div>
               );
