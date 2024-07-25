@@ -69,7 +69,10 @@ const Footer = () => {
           },
           {
             title: "CONTACT US",
-            contact: [{ label: "Mulearn" }, { label: "https://mulearn.org/" }],
+            contact: [
+              { label: "MuPlay Connext" },
+              { label: "connect@muplay.gg" },
+            ],
           },
         ].map((section, index) => (
           <div key={index}>
