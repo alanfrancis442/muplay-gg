@@ -9,6 +9,7 @@ import Cap from "./components/cap/Cap";
 import Events from "./components/allEvents/Events";
 import Simulate from "./components/simulation/page";
 import Teams from "./components/teams/page";
+import Career from "./components/career/Career";
 import Partners from "./components/partners/page";
 import Footer from "./components/footer/page";
 
@@ -58,6 +59,7 @@ export default function Home() {
         <Events />
         <Simulate />
         <Teams />
+        <Career />
         <Partners />
         <Footer />
       </div>
